@@ -1,0 +1,497 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/*
+Part of website on which styling applied
+
+Body background
+foreground color (font-color)
+
+Button background color
+button text color
+button hover color
+button hover text color
+
+navbar background color
+navbar text color
+navbar hover link
+navbar hover link background color
+
+*/
+
+:root {
+  /*Shades of Green*/
+  --colorGreen1: #D2E8E3;
+  --colorGreen2: #0F6466;
+  --colorGreen3: #E8F3F0;
+
+  /*Shades of Black*/
+  --colorBlack1: black;
+  --colorBlack2: #2C3532;
+
+  /*Shades of Blue*/
+  --colorBlue1: #C0D6E8;
+  --colorBlue2: #224A69;
+  --colorBlue3: #D3E2EF;
+
+  /*white*/
+  --colorWhite: #ffffff;
+
+
+  /*shades of Red*/
+  --colorRed1: #C65D57;
+  /* ────────────────────────────────────────────── */
+  /* Theme
+  /* ────────────────────────────────────────────── */
+  /*
+  body background
+  navbar-link-color
+  footer-text-color
+  copy-code button text-color
+  text-color for table-header
+  */
+  --color4: var(--colorGreen1);
+
+  /*
+  background
+    button-primary
+    hover-4-button-highlight
+    hover-4-button-outline 
+  Spinner Boder color
+  footer text color
+  code-text-color
+  copy-code button-background when hover
+  table header background color
+  */
+  --color5: var(--colorGreen2);
+
+  /*
+  button-primary hover
+  navbar-background-color
+  input-focus
+  footer-background-color
+  border-color for button-outline
+  copy-code button background color
+  background-color for code
+  border-color for table
+  */
+  --color7: var(--colorBlack2);
+
+  /*
+  form background
+  card background
+  */
+  --color6: var(--colorGreen3);
+
+  /*
+  foreground-color (text-color)
+  text-color for button-outline
+  */
+  --color8: var(--colorBlack1);
+
+
+  /*
+  text-color
+    button-primary
+    hoverv 4 button-outline
+  */
+  --color9: var(--colorWhite);
+
+  /*
+  Highlight text color
+  highlight button-background
+  inline-code text-color
+
+  */
+  --color10: var(--colorRed1);
+
+
+  /*form-background*/
+  --navbar-color: #2C3532;
+  /*navbar-background, also-> button-hover, buttonTiny*/
+}
+
+@media (prefers-color-scheme: dark) {
+
+  /*set color-theme here*/
+}
+
+
+
+body {
+  color: var(--color8);
+  /*text color*/
+
+  background: var(--color4);
+  font-family: Verdana, sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+main {
+  margin: 0px 8px;
+}
+
+
+
+nav {
+  background-color: var(--color7);
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+/* Logo */
+nav .logo {
+  flex-shrink: 0;
+  width: auto;
+}
+
+/* Base link style */
+nav a {
+  color: var(--color4);
+  padding: 10px 20px;
+  display: inline-flex;
+
+  align-items: center;
+  gap: 8px;
+
+}
+
+/* Hover background (non-ul links) */
+nav a:hover {
+  /*background-color: var(--color5);*/
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Desktop menu */
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none !important;
+  border: none;
+  color: var(--color4);
+  cursor: pointer;
+}
+
+/* ===========================
+   Navbar - Responsive (Mobile / Tablet)
+   =========================== */
+@media (max-width: 830px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--color7);
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links li a {
+    width: auto;
+    padding: 14px 20px;
+  }
+}
+
+table {
+  border-color: var(--color7);
+}
+
+table thead {
+  background-color: var(--color5);
+  color: var(--color4);
+}
+
+input {
+  @apply text-black w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-0
+}
+
+input:focus {
+  border-color: var(--color7);
+}
+
+
+footer {
+  background-color: var(--color7);
+  color: var(--color4);
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+code {
+  color: var(--color10);
+}
+
+/* =======================
+     figure
+  ======================== */
+figure {
+  @apply my-10 flex flex-col items-center;
+}
+
+figcaption {
+  @apply mt-3 text-sm text-gray-500 italic text-center;
+}
+
+
+@layer utilities {
+
+  /* ────────────────────────────────────
+  /* General Settings for Themes */
+  /* ────────────────────────────────────*/
+  .screenMiddleDivHorizontal {
+    @apply flex items-center justify-center py-8 w-full
+  }
+
+  .formDiv {
+    @apply w-full max-w-md p-6 shadow-2xl rounded-lg;
+  }
+
+  .formLabel {
+    @apply block text-sm font-medium text-gray-700
+  }
+
+  .formButton {
+    @apply w-full py-2 px-4
+  }
+
+
+  .page-title-center {
+    @apply text-center tracking-wide;
+  }
+
+
+  .text-highlight {
+    color: var(--color10);
+  }
+
+  /*base button*/
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 transition-colors text-sm font-medium;
+    background-color: var(--color5);
+    color: var(--color9);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color7);
+    cursor: pointer;
+  }
+
+  /*highlight button */
+  .btn-highlight {
+    background-color: var(--color10);
+  }
+
+  .btn-highlight:hover {
+    background-color: var(--color5);
+    color: var(--color9);
+  }
+
+  /*outline button*/
+  .btn-outline {
+    @apply border bg-transparent;
+    border-color: var(--color7);
+    color: var(--color8);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color5);
+    color: var(--color9);
+    border-color: transparent;
+  }
+
+  /*sizes buttons*/
+  .btn-sm {
+    @apply px-4 py-2 text-xs rounded-md;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base rounded-xl;
+  }
+
+    /*custom tables*/
+  .logic-table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 420px;
+    font-family: Arial, sans-serif;
+  }
+
+  .logic-table th,
+  .logic-table td {
+    border: 1px solid #333;
+    padding: 8px 14px;
+    text-align: center;
+  }
+
+  .logic-table thead {
+    background-color: #f3f4f6;
+  }
+
+  .logic-table th {
+    font-weight: 600;
+  }
+
+  .logic-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  .logic-table tbody tr:hover {
+    background-color: #eef6ff;
+  }
+
+  /*Links
+  a{
+  }
+  */
+  .link-inline{
+    text-decoration: underline;
+  }
+  .link-inline:hover{
+    color: var(--color10);
+  }
+
+
+}
+
+
+
+/*File: global.css*/
+
+/* rehype-pretty-code line numbers */
+pre code {
+  counter-reset: line;
+}
+
+pre code>span {
+  display: block;
+  counter-increment: line;
+}
+
+pre code>span::before {
+  content: counter(line);
+  display: inline-block;
+  width: 2.5rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #6b7280;
+  /* gray-500 */
+  user-select: none;
+}
+
+/* highlighted lines */
+.line--highlighted {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* highlighted words */
+.word--highlighted {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+
+
+
+
+
+
+figure[data-rehype-pretty-code-figure] {
+  @apply block w-full overflow-x-auto rounded-lg m-3;
+}
+
+
+span[data-rehype-pretty-code-figure]>.abCodeView2 {
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--color10);
+}
+
+/* Outer <pre> element */
+.abCodeView0 {
+  @apply relative w-full overflow-x-auto overflow-y-hidden scroll-smooth mt-1;
+  background-color: var(--color7);
+}
+
+.abCodeView1 {
+  @apply block w-full min-w-full;
+}
+
+.abCodeView2 {
+  @apply px-1.5 py-4 rounded text-sm font-mono whitespace-pre break-normal w-full min-w-full block;
+  background-color: transparent;
+}
+
+.abCodeViewTop {
+  @apply w-fit min-w-max;
+  cursor: pointer;
+  background-color: var(--color7);
+  color: var(--color4);
+}
+
+.abCodeViewTop:hover {
+  background-color: var(--color5);
+  cursor: pointer;
+}
+
+.abCodeViewTop>button:hover {
+  cursor: pointer;
+}
+
+.abCodeView2>span[data-line] {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  line-height: 0.25;
+}
+
+.abCodeView2>span[data-line]>span {
+  display: inline;
+  padding: 0;
+  line-height: inherit;
+}

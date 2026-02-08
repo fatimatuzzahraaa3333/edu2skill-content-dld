@@ -1,0 +1,156 @@
+---
+title: "XOR (Exclusive OR) Gate"
+description: "ODD Function"
+author: "M Abo Bakar Aslam"
+slugAuthorProfile: "m-abobakar-aslam"
+---
+
+This gate will generate otput as 1 (HIGH), if number of 1's in inputs are ODD. This is also called <mark>ODD Function</mark>.
+
+
+## 1. Properties
+
+<ol type="a" style={{ listStyleType: "lower-alpha", paddingLeft: "20px" }}>
+    <li>Output will be 1, if number of 1's in inputs are ODD. Otherwise, output is 0.</li>
+    <li>This is also called <mark>ODD Function</mark></li>
+</ol>
+
+
+## 2. Symbol - 2 Inputs XOR Gate
+<figure>
+  <img src="/images/dld/xor-2-gate.png" alt="XOR Gate with 2 Inputs" />
+  <figcaption>Figure 1: XOR Gate with 2 Inputs</figcaption>
+</figure>
+
+## 3. Boolean Expression - 2 inputs XOR Gate
+<div className="text-center"> Y = AB′ + A′B = A ⊕ B </div>
+
+## 4. Truth Table - 2 Inputs XOR Gate
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^2 = 4 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## 5. Circuit Diagram using Basic Gates
+
+<figure>
+  <img src="/images/dld/xor-2-circuit.png" alt="Circuit Diagram for 2 Input XOR Gate" />
+  <figcaption>Figure 2: Circuit Diagram for 2 Input XOR Gate</figcaption>
+</figure>
+
+<br />
+---
+
+## 6. Symbol - 3 Inputs XOR Gate
+<figure>
+  <img src="/images/dld/xor-3-gate.png" alt="XOR Gate with 3 Inputs" />
+  <figcaption>Figure 3: XOR Gate with 3 Inputs</figcaption>
+</figure>
+
+## 7. Boolean Expression - 3 inputs XOR Gate
+<div className="text-center"> Y = A ⊕ B ⊕ C = (AB′ + A′B) ⊕ C</div>
+<div className="text-center"> Y = (AB′ + A′B)'C + (AB′ + A′B)C'</div>
+
+## 8. Truth Table - 3 Inputs XOR Gate
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^3 = 8 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3, 4, 5, 6, 7 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## 9. Circuit Diagram using Basic Gates for 3 Input XOR Gate
+
+<figure>
+  <img src="/images/dld/xor-3-circuit.png" alt="Circuit Diagram for 3 Input XOR Gate" />
+  <figcaption>Figure 4: Circuit Diagram for 3 Input XOR Gate</figcaption>
+</figure>

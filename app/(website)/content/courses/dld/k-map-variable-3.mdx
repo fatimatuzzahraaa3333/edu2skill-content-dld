@@ -1,0 +1,392 @@
+---
+title: "Karnaugh Map - 3 Variables"
+description: "Karnaugh Mapping for Boolean expression having 3 variables"
+author: "M Abo Bakar Aslam"
+slugAuthorProfile: "m-abobakar-aslam"
+---
+
+A Karnaugh Map (K-Map) is a visual method used to simplify Boolean expressions in combinational logic circuits. It reduces complex logic functions into minimal forms, helping designers create efficient digital circuits.
+
+
+## Structure of 3-Variable Karnaugh Map
+
+A 3-variable K-Map consists of <mark>8 cells</mark>, representing all possible combinations of inputs x, y and z. Each cell corresponds to a minterm of the Boolean function. The map is arranged in <mark>Gray code</mark> order so that only one variable changes between adjacent cells, enabling easy grouping and simplification of logic terms.
+
+<ol type="a" style={{ listStyleType: "lower-alpha", paddingLeft: "20px" }}>
+    <li>Number of Input Variables = n = 3</li>
+    <li>Total Number of Cells in K-map = 2^n = 2^3 = 8</li>
+</ol>
+
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/structure-k-map-variable-3.png" alt="Cell Arrangement for K-Map having 3 Variables Boolean Expression" width="300px" height="auto" />
+  <figcaption>Figure 1: Cell Arrangement for K-Map having 3 Variables Boolean Expression</figcaption>
+</figure>
+
+## Rules for Construction of K-Map and Grouping
+1. Allowed number of 1's in a group are 1, 2, 4, 8, 16. These number of power of 2 i.e., 2^0(1), 2^1(2), 2^2(4), 2^3(8), 2^4(16)
+2. Increase number of 1's in a group
+3. Decrease number of groups
+4. Only adjacent-cells can be in a group. Diagonal cells are not allowed to be in a group.
+
+## 1. Example - 1
+## Reduce <mark>F = x’y’z’ + x’y’z + x’yz’</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-1-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 2: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-1-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 3: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** x=0, z=0 → x’, z’  
+**For G2:** x=0, y=0 → x’y’
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** x’z’  
+**For G2:** x’y’
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = x’z’ + x’y’**
+
+
+
+## 2. Example - 2
+## Reduce <mark>F = x’y’z’ + xy’z + x’yz’</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-2-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 3: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-2-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 4: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** x=0, z=0 → x’, z’  
+**For G2:** x=1, y=0, z=1 → x, y’, z
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** x’z’  
+**For G2:** xy’z
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = x’z’ + xy’z**
+
+
+## 3. Example - 3
+## Reduce <mark>F = x’yz + xy’z + x’y’z’</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-3-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 5: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-3-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 6: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** x=0, y=1, z=1 → x’, y, z  
+**For G2:** x=1, y=0, z=1 → x, y’, z  
+**For G3:** x=0, y=0, z=0 → x’, y’, z’
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** x’yz  
+**For G2:** xy’z  
+**For G3:** x’y’z’
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = x’yz + xy’z + x’y’z’**
+
+
+## 4. Example - 4
+## Reduce <mark>F = x’yz + xy’z + xyz</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-4-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 7: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-4-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 8: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** y=1, z=1 → y, z  
+**For G2:** x=1, z=1 → x, z  
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** yz  
+**For G2:** xz
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = yz + xz**
+
+
+## 5. Example - 5
+## Reduce <mark>F = x’y’z + x’yz + xy’z + xyz</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-5-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 9: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-5-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 10: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** z=1 → z
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** z
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = z**
+
+
+## 6. Example - 6
+## Reduce <mark>F = x’y’z’ + xy’z’ + x’yz’ + xyz’</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-6-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 11: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-6-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 12: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** z=0 → z’
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** z’
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = z’**
+
+
+
+
+## 7. Example - 7
+## Reduce <mark>F = x’y’z’ + xy’z’ + x’yz’ + xyz’ + x’y’z + xy’z</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-7-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 13: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-7-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 14: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** z=0 → z’  
+**For G2:** y=0 → y’  
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** z’  
+**For G2:** y’
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = y’ + z’**
+
+
+## 8. Example - 8
+## Reduce <mark>F = x’y’z’ + xy’z’ + x’yz’ + xyz’ + x’yz + xyz</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-8-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 15: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-8-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 16: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** z=0 → z’  
+**For G2:** y=1 → y  
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** z’  
+**For G2:** y
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = y + z’**
+
+
+
+## 9. Example - 9
+## Reduce <mark>F = x’y’z’ + xy’z’ + x’yz’ + xyz’ + x’yz + xyz + x’y’z</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-9-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 17: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-9-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 18: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** z=0 → z’  
+**For G2:** y=1 → y  
+**For G3:** x=0 → x’ 
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** z’  
+**For G2:** y  
+**For G3:** x’
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = x’ + y + z’**
+
+
+## 10. Example - 10
+## Reduce <mark>F = x’y’z’ + xy’z’ + x’yz’ + xyz’ + x’yz + xyz + x’y’z + xy’z</mark> to minimum number of literals
+
+#### Step 1:
+Placing 1 for respective box according to above structure.
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-10-step-1.png" alt="Step 1 - Placing 1s according to map" width="300px" height="auto"/>
+  <figcaption>Figure 19: Step 1 - Placing 1s according to map</figcaption>
+</figure>
+
+#### Step 2:
+Make groups of join-boxes containing values
+
+<figure>
+  <img src="/images/dld/k-map/variable-3/example-10-step-2.png" alt="Step 2 - Making Groups" width="300px" height="auto"/>
+  <figcaption>Figure 20: Step 2 - Making Groups</figcaption>
+</figure>
+
+#### Step 3:
+For each group, select variable whose is not changed. And then create respective literal  
+**For G1:** no such variable
+
+
+#### Step 4:
+Create minterm for each group  
+**For G1:** 1
+
+
+#### Step 5:
+Create final function by adding for all minterms  
+**F = 1**
+

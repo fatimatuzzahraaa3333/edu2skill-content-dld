@@ -1,0 +1,320 @@
+---
+title: "OR Gate"
+description: "Addition of all inputs"
+author: "M Abo Bakar Aslam"
+slugAuthorProfile: "m-abobakar-aslam"
+---
+
+The OR gate produces a HIGH output when any input is HIGH. It performs logical addition in combinational logic circuits.
+
+
+## 1. Properties
+<ol type="a" style={{ listStyleType: "lower-alpha", paddingLeft: "20px" }}>
+    <li>Minimum two inputs</li>
+    <li>Output is 1, if any input is 1</li>
+    <li>Output is 0, only if all inputs are 0</li>
+</ol>
+
+## 2. Symbol - 2 Inputs OR Gate
+<figure>
+  <img src="/images/dld/or-2-gate.png" alt="OR Gate with 2 Inputs" />
+  <figcaption>Figure 1: OR Gate with 2 Inputs</figcaption>
+</figure>
+
+## 3. Boolean Expression - 2 inputs OR Gate
+<div className="text-center"> Y = A + B </div>
+
+## 4. Truth Table - 2 Inputs OR Gate
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^2 = 4 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+---
+
+## 5. OR Gate with 3 Inputs
+
+#### Symbol
+<figure>
+  <img src="/images/dld/or-3-gate.png" alt="OR Gate with 3 Inputs" />
+  <figcaption>Figure 2: OR Gate with 3 Inputs</figcaption>
+</figure>
+
+#### Boolean Expression
+<div className="text-center"> Y = A + B + C </div>
+
+#### Truth Table
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^3 = 8 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3, 4, 5, 6, 7</div>
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+---
+
+## 6. OR Gate with 4 Inputs
+#### Symbol
+<figure>
+  <img src="/images/dld/or-4-gate.png" alt="OR Gate with 4 Inputs" />
+  <figcaption>Figure 3: OR Gate with 4 Inputs</figcaption>
+</figure>
+
+#### Boolean Expression
+<div className="text-center"> Y = A + B + C + D </div>
+
+#### Truth Table
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^4 = 16 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br />
+---
+
+## 7. OR Gate with 1 Inputs
+This logic-gates actually <mark>doesn't exist</mark> but we can <mark>construct it by using 2-Input-OR-Gate</mark>.
+#### Symbol
+<figure>
+  <img src="/images/dld/or-1-gate.png" alt="OR Gate with 1 Input" />
+  <figcaption>Figure 4: OR Gate with 1 Inputs</figcaption>
+</figure>
+
+#### Boolean Expression
+<div className="text-center"> Y = A + A = A </div>
+
+#### Truth Table
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^1 = 2 </div>
+<div className="text-center"> Total Numbers: 0, 1 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>

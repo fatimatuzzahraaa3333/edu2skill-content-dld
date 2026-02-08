@@ -1,0 +1,93 @@
+---
+title: "NOR Gate"
+description: "Inverse of the OR gate"
+author: "M Abo Bakar Aslam"
+slugAuthorProfile: "m-abobakar-aslam"
+---
+
+The NOR gate is the inverse of the OR gate and produces HIGH only when all inputs are LOW.  It is a <a href="universal-gates" className="link-inline">universal gate</a> used to build any digital circuit. 
+<br />
+Click <a href="universal-gates" className="link-inline">here</a> if you want to know how this gate will act as universal gate. 
+
+
+## 1. Properties
+<ol type="a" style={{ listStyleType: "lower-alpha", paddingLeft: "20px" }}>
+    <li>Minimum two inputs</li>
+    <li>It inverts output of OR Gate. It is a combination of OR followed by NOT.</li>
+</ol>
+
+<figure>
+  <img src="/images/dld/nor-gate-with-or-not-gate.png" alt="NOR Gate is Combination of AND and NOT Gate" />
+  <figcaption>Figure 1: NOR Gate is Combination of OR and NOT Gate</figcaption>
+</figure>
+
+
+## 2. Symbol - 2 Inputs NOR Gate
+<figure>
+  <img src="/images/dld/nor-2-gate.png" alt="NOR Gate with 2 Inputs" />
+  <figcaption>Figure 2: NOR Gate with 2 Inputs</figcaption>
+</figure>
+
+## 3. Boolean Expression - 2 inputs NOR Gate
+<div className="text-center"> Y = (A + B)' </div>
+
+## 4. Truth Table - 2 Inputs NOR Gate
+<div className="text-center"> Total Number of Rows = 2^(number of inputs) = 2^2 = 4 </div>
+<div className="text-center"> Total Numbers: 0, 1, 2, 3 </div>
+
+<table className="logic-table">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>A+B</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+---
+
+## 5. NOR Gate with Multiple Inputs
+
+<figure>
+  <img src="/images/dld/nor-3-gate.png" alt="NOR Gate with 3 Inputs" />
+  <figcaption>Figure 3: NOR Gate with 3 Inputs</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/dld/nor-4-gate.png" alt="NOR Gate with 4 Inputs" />
+  <figcaption>Figure 4: NOR Gate with 4 Inputs</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/dld/nor-1-gate.png" alt="NOR Gate with 1 Inputs" />
+  <figcaption>Figure 5: NOR Gate with 1 Inputs</figcaption>
+</figure>
